@@ -11,6 +11,10 @@ const props = () => ({
     type: Boolean,
     default: false
   },
+  required: {
+    type: Boolean,
+    default: false
+  },
   extra: {
     type: String,
     default: null
