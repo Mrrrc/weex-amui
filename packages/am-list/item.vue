@@ -10,8 +10,10 @@
     </slot>
     <div class="am-list-line" :class="lineClass">
       <div v-if="!!title" :class="['am-list-content', `am-list-content-text-${titleNumber}`]">
-        <text class="am-list-content-text" :class="contentTextClass">{{title}}</text>
-        <text v-if="true" class="am-list-title-required">*</text>
+        <div class="am-list-title">
+	<text class="am-list-content-text" :class="contentTextClass">{{title}}</text>
+    <text v-if="required" class="am-list-title-required">*</text>
+</div>
         <slot name="brief">
           <text class="am-list-content-brief" v-if="brief">{{brief}}</text>
         </slot>
