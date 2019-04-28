@@ -1,6 +1,7 @@
 <template>
   <item
     arrow=""
+    :required="required"
     :title="title"
     :title-number="titleNumber"
     :tap-active="false"
@@ -51,6 +52,10 @@ export default {
     titleNumber: {
       type: Number,
       default: 5
+    },
+    required: {
+      type: Boolean,
+      default: false
     },
     placeholder: {
       type: String,
